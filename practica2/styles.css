@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -71,18 +70,18 @@ body {
 .card-image {
     width: 100%;
     height: 180px;
-    overflow: hidden; /* Crucial para que la imagen no salga de la tarjeta al escalar */
+    overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease-in-out; /* Animación suave */
+    transition: transform 0.3s ease-in-out;
 }
 
 .course-card:hover .card-image img {
-    transform: scale(1.1); /* Incrementa 10% el tamaño */
+    transform: scale(1.1); 
 }
 
 /* Contenido de la tarjeta */
