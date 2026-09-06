@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+            
+            margin: 0 auto;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            
+            box-sizing: border-box;
+        }
+
+
+        /* HEADER */
+        header {
+            background-color: #16376c;
+            padding: 10px 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header .logo {
+            width: 50%;
+            height: 50%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 1.25rem;
+            color: #ffffff;
+        }
+
+        header form {
+            display: flex;
+            border: 2px solid #071832;
+            border-radius: 6px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        header form input {
+            border: none;
+            padding: 8px 12px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        header form button {
+            background-color: #fff;
+            border: none;
+            border-left: 1px solid #e0e0e0;
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+        /* NAV  */
+        nav {
+            background-color: #1C4587;
+            border: 2px solid #1C4587;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: flex-start;
+            gap: 15px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bolder;
+            font-size: 0.95rem;
+        }
+
+        /* ---------------- CONTENEDOR PRINCIPAL---------------- */
+        .layout-container {
+            display: flex;
+            align-items: stretch;
+            flex: 1;
+        }
+
+        /* ---------------- MAIN---------------- */
+        main {
+            flex: 3;
+            background-color: #F3E1C4;
+            padding: 80px;
+        }
+
+        /* ---------------- SECTION ---------------- */
+        section {
+            background-color: #e9e5f5;
+            border: 2px solid #D4932B;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        section h2 {
+            color: #203764;
+            font-size: 1.1rem;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        /* ---------------- ARTICLE ---------------- */
+        article {
+            background-color: #fbe5d6;
+            border: 2px solid #ec7c9a;
+            border-radius: 8px;
+            padding: 14px 18px;
+        }
+
+        article h3 {
+            color: #c00000;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        article p {
+            font-size: 0.85rem;
+            color: #444;
+        }
+
+        /* ---------------- ASIDE ---------------- */
+        aside {
+            flex: 1.1;
+            background-color: #deebf7;
+
+            padding: 20px 15px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        aside h2 {
+            color: #1f4e78;
+            font-size: 1.1rem;
+        }
+
+
+        /* ---------------- FOOTER ---------------- */
+        footer {
+            background-color: #203764;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        footer .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        footer .social-links a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: #fff;
+            background-color: #2458AE;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        footer p {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+        }
+
+        footer .legal-links {
+            display: flex;
+            list-style: none;
+            gap: 12px;
+        }
+
+        footer .legal-links a {
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn1").click(function () {
+                
+                var opc = parseInt($("#opc").val())
+                switch (opc) {
+                    case 1:
+                        var r = parseInt($("#nv1").val()) + parseInt($("#nv2").val());
+                        break;
+                    case 2:
+                        var r = parseInt($("#nv1").val()) * parseInt($("#nv2").val());
+                        break;
+                    default:
+                        var r = "";
+                        break;
+                }
+                $("#vres").val("" + r);
+            })
+        });
+    </script>
+
+    <style>
+        .contenedor {
+            border: 5px solid rgb(199, 161, 255);
+            background-color: rgb(219, 210, 255);
+            color: #003638;
+            text-align: left;
+            padding-left: 20px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 50px;
+
+            width: 100%;
+        }
+
+        .contenedor label {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <img class="logo" src="/practica1/img/logo_unach.png">
+        </div>
+        <h1>UNIVERSIDAD AUTÓNOMA DE CHIAPAS<br>ESCUELA DE TECNOLOGÍAS DIGITALES APLICADAS C-IV</h1>
+        <form role="search">
+            <input type="search" placeholder="Buscar...">
+            <button type="submit">🔍</button>
+        </form>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a class="my-links" href="#inicio">Inicio</a></li>
+            <li><a class="my-links" href="#nosotros">Nosotros</a></li>
+            <li><a class="my-links" href="#servicios">Servicios</a></li>
+            <li><a class="my-links" href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <div class="layout-container">
+
+        <main>
+            <section>
+                <h2>Sección Principal</h2>
+
+                <article>
+                    <h3>Artículo 1</h3>
+                    <p>Contenido del primer artículo...</p>
+                </article>
+
+                <article>
+                    <h3>Artículo 2</h3>
+                    <p>Contenido del segundo artículo...</p>
+                </article>
+
+            </section>
+        </main>
+
+        <aside>
+            <h2>Contenido complementario</h2>
+            <p>Calculadora HTML</p>
+            <div class="contenedor">
+                <form>
+                    <label>Num1: </label>
+                    <input type="text" id="nv1" size="6" placeholder="Dato entero" maxlength="3">
+                    <br>
+                    <label>Num2: </label>
+                    <input type="text" id="nv2" size="6" placeholder="Dato entero" maxlength="3">
+                    <br>
+
+
+                    <label>Operación: </label>
+                    <select id="opc">
+                        <option value="0">Selecciona..</option>
+                        <option value="1">Sumar</option>
+                        <option value="2">Multiplicar</option>
+                    </select>
+                    <br>
+
+                    <button type="button" id="btn1">Ejecutar</button>
+                    <br>
+
+                    <label>Resultado:</label>
+                    <input type="text" id="vres" size="6" readonly value="0">
+                </form>
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">Email</a>
+        </div>
+        <p>&copy; 2026 UNACH</p>
+        <ul class="legal-links">
+            <li><a href="#">Contacto</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Privacidad</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>

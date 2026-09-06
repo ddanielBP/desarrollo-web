@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f5f6f8;
+    color: #333;
+}
+
+/* Header */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #1C4587;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #c49a45;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #a67c33;
+}
+
+#recargar-ico{
+  filter: invert(1);
+}
+
+/* Requerimiento 1: Grid Responsivo */
+.container {
+    padding: 40px 5%;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Tarjetas */
+.course-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Requerimiento 2: Contenedor de la imagen y efecto Hover */
+.card-image {
+    width: 100%;
+    height: 180px;
+    overflow: hidden; /* Crucial para que la imagen no salga de la tarjeta al escalar */
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+.course-card:hover .card-image img {
+    transform: scale(1.1); /* Incrementa 10% el tamaño */
+}
+
+/* Contenido de la tarjeta */
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.institution {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.course-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.duration {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Sección de precios */
+.prices {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+.price-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 0.8rem;
+    border-right: 1px solid #eee;
+    flex: 1;
+}
+
+.price-item:last-child {
+    border-right: none;
+}
+
+.price-item strong {
+    font-size: 1rem;
+    color: #111;
+    margin-top: 5px;
+}
+
+/* Botón de inscripción */
+.btn-enroll {
+    background-color: transparent;
+    color: #1C4587;
+    border: 1px solid #1C4587;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-enroll:hover {
+    background-color: #c49a45;
+    border: 1px solid #c49a45;
+    color: white;
+}
