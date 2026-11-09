@@ -9,6 +9,10 @@ import { defineConfig } from 'vite';
 // https://vitejs.dev/config/
 export default defineConfig({
     base: '/desarrollo-web/empleado-qr/', // <-- Coloca aquí el nombre exacto de tu repositorio en GitHub
+    build: {
+        outDir: '../empleado-qr', // Compila hacia la carpeta que leerá GitHub Pages
+        emptyOutDir: true
+    },
     optimizeDeps: {
         noDiscovery: true
     },
