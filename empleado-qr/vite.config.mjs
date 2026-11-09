@@ -8,7 +8,7 @@ import { defineConfig } from 'vite';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: '/evidencias-web/', // <-- Coloca aquí el nombre exacto de tu repositorio en GitHub
+    base: '/desarrollo-web/empleado-qr/', // <-- Coloca aquí el nombre exacto de tu repositorio en GitHub
     optimizeDeps: {
         noDiscovery: true
     },
