@@ -1,1 +1,0 @@
-import{_ as a,c as o,a as s,o as t}from"./index-B3sFFNh_.js";const n={},c={class:"card"};function r(i,e){return t(),o("div",c,[...e[0]||(e[0]=[s("div",{class:"font-semibold text-xl mb-4"},"Panel Principal",-1),s("p",null,"Contenido inicial del sistema.",-1)])])}const d=a(n,[["render",r]]);export{d as default};

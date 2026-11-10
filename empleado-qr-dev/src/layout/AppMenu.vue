@@ -20,6 +20,11 @@ const model = ref([
                 label: 'Clientes QR',
                 icon: 'pi pi-fw pi-id-card',
                 to: '/clientes-qr'
+            }, 
+            {
+                label: 'Punto de venta',
+                icon: 'pi pi-fw pi-table',
+                to: '/punto-venta'
             }
         ]
     }

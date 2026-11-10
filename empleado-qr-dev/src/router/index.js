@@ -18,6 +18,11 @@ const router = createRouter({
                     path: '/clientes-qr',
                     name: 'clientes-qr',
                     component: () => import('@/views/ClientesQR.vue')
+                },
+                {
+                    path: '/punto-venta',
+                    name: 'punto-venta',
+                    component: () => import('@/views/PuntoVenta.vue')
                 }
             ]
         }
